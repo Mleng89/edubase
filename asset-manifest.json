@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/edubase/static/css/main.78029824.chunk.css",
+    "main.js": "/edubase/static/js/main.4475f7e0.chunk.js",
+    "main.js.map": "/edubase/static/js/main.4475f7e0.chunk.js.map",
+    "runtime-main.js": "/edubase/static/js/runtime-main.bd3d81ae.js",
+    "runtime-main.js.map": "/edubase/static/js/runtime-main.bd3d81ae.js.map",
+    "static/js/2.009a8e84.chunk.js": "/edubase/static/js/2.009a8e84.chunk.js",
+    "static/js/2.009a8e84.chunk.js.map": "/edubase/static/js/2.009a8e84.chunk.js.map",
+    "index.html": "/edubase/index.html",
+    "static/css/main.78029824.chunk.css.map": "/edubase/static/css/main.78029824.chunk.css.map",
+    "static/js/2.009a8e84.chunk.js.LICENSE.txt": "/edubase/static/js/2.009a8e84.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bd3d81ae.js",
+    "static/js/2.009a8e84.chunk.js",
+    "static/css/main.78029824.chunk.css",
+    "static/js/main.4475f7e0.chunk.js"
+  ]
+}
