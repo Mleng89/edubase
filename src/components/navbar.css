@@ -26,6 +26,11 @@ body {
 .navbar-links li {
 	list-style: none;
 }
+button {
+	border: none;
+	background-color: transparent;
+	outline: none;
+}
 .navbar-links li a {
 	text-decoration: none;
 	color: white;
