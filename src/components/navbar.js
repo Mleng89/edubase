@@ -1,38 +1,74 @@
-import React, { useEffect } from 'react';
+import { useRef } from 'react';
+import { BrowserRouter, NavLink } from 'react-router-dom';
+import AllRoutes from './Routes';
 import './navbar.css';
 export default function Navbar() {
-	const navbarLinks = document.getElementsByClassName('navbar-links');
-	console.log('what is navbarLinks before effect', navbarLinks);
-	/** This is required as navbar-links is not loaded initially with the page
-	 *  Once navbarLinks updates, useEffect will rerender it allowing the hamburger to work when
-	 *  the browser past 750px
-	 * */
-	useEffect(() => {}, [navbarLinks]);
-
+	const navbarLinks = useRef(null);
+	const handleNavBar = (e) => {
+		navbarLinks.current.classList.toggle('menu-collapse');
+	};
+	const hideNav = () => {
+		if (!navbarLinks.current.classList.contains('menu-collapse'))
+			navbarLinks.current.classList.add('menu-collapse');
+	};
 	return (
-		<div className='navbar'>
-			<div className='brand-title'> EduBase </div>
-			<button
-				className='toggle-button'
-				onClick={() => navbarLinks[0].classList.toggle('active')}
-			>
-				<span className='bar'></span>
-				<span className='bar'></span>
-				<span className='bar'></span>
-			</button>
-			<div className='navbar-links'>
-				<ul>
-					<li>
-						<a href='/#'>About us</a>
-					</li>
-					<li>
-						<a href='/#'>Contact</a>
-					</li>
-					<li>
-						<a href='/#'>Log in/ Sign up</a>
-					</li>
-				</ul>
-			</div>
-		</div>
+		<>
+			<BrowserRouter>
+				<nav className='navbar'>
+					<div className='brand-title'> EduBase </div>
+					<button
+						className='toggle-button'
+						onClick={(e) => {
+							handleNavBar(e);
+						}}
+					>
+						<span className='bar'></span>
+						<span className='bar'></span>
+						<span className='bar'></span>
+					</button>
+					<div ref={navbarLinks} className='navbar-links menu-collapse'>
+						<ul className='links-list'>
+							<li className='nav-item'>
+								<NavLink
+									className='nav-link'
+									activeClassName='is-active'
+									exact={true}
+									to='/'
+								>
+									About us
+								</NavLink>
+							</li>
+							<li className='nav-item'>
+								<NavLink
+									className='nav-link'
+									activeClassName='is-active'
+									exact={true}
+									to='/'
+								>
+									Contact
+								</NavLink>
+							</li>
+							<li className='nav-item'>
+								<NavLink
+									className='nav-link'
+									activeClassName='is-active'
+									exact={true}
+									to='/'
+								>
+									Log in/ Sign up
+								</NavLink>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div>
+					<AllRoutes
+						hideMenu={() => {
+							hideNav();
+						}}
+					></AllRoutes>
+				</div>
+			</BrowserRouter>
+		</>
 	);
 }
