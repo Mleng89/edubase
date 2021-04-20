@@ -15,7 +15,16 @@ export default function Navbar() {
 		<>
 			<BrowserRouter>
 				<nav className='navbar'>
-					<div className='brand-title'> EduBase </div>
+					<div className='brand-title'>
+						<NavLink
+							className='nav-link'
+							activeClassName='is-active'
+							exact={true}
+							to='/'
+						>
+							EduBase
+						</NavLink>
+					</div>
 					<button
 						className='toggle-button'
 						onClick={(e) => {
@@ -33,7 +42,7 @@ export default function Navbar() {
 									className='nav-link'
 									activeClassName='is-active'
 									exact={true}
-									to='/'
+									to='/about'
 								>
 									About us
 								</NavLink>
@@ -43,7 +52,7 @@ export default function Navbar() {
 									className='nav-link'
 									activeClassName='is-active'
 									exact={true}
-									to='/'
+									to='/contact'
 								>
 									Contact
 								</NavLink>
@@ -53,7 +62,7 @@ export default function Navbar() {
 									className='nav-link'
 									activeClassName='is-active'
 									exact={true}
-									to='/'
+									to='/user'
 								>
 									Log in/ Sign up
 								</NavLink>
