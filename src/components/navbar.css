@@ -16,6 +16,15 @@ body {
 .brand-title {
 	font-size: 1.5rem;
 	margin: 0.5rem;
+	color: white;
+}
+.brand-title > .nav-link {
+	text-decoration: none;
+	color: white;
+	display: block;
+}
+.brand-title > .nav-link:hover {
+	filter: invert(25%);
 }
 .navbar-links ul {
 	margin: 0;

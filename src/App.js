@@ -4,7 +4,6 @@ function App() {
 	return (
 		<div className=''>
 			<Navbar />
-			<header className='App-header'>Hello</header>
 		</div>
 	);
 }
