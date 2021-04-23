@@ -1,0 +1,78 @@
+.account-container {
+	margin-top: 5rem;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+}
+.account-signin {
+	text-align: center;
+	width: 25rem;
+	height: 35rem;
+	border-radius: 5%;
+	border: 2px black solid;
+}
+#username {
+	height: 3rem;
+	font-size: large;
+	margin: 0.5rem;
+}
+#password {
+	height: 3rem;
+	font-size: large;
+	margin: 0.5rem;
+}
+.sign-in {
+	display: flex;
+	flex-direction: column;
+}
+.form-info {
+	display: flex;
+	flex-direction: column;
+}
+#submit {
+	/* font-family: Hack, monospace; */
+	background: #0000ff;
+	color: #ffffff;
+	cursor: pointer;
+	font-size: 1em;
+	padding: 1.5rem;
+	border: 0;
+	transition: all 0.5s;
+	border-radius: 10px;
+	width: auto;
+	position: relative;
+}
+#submit:after {
+	font-family: 'Font Awesome 5 Pro';
+	font-weight: 400;
+	position: absolute;
+	left: 85%;
+	top: 31%;
+	right: 5%;
+	bottom: 0;
+	opacity: 0;
+}
+
+#submit:hover {
+	background: #0c0cfc;
+	transition: all 0.5s;
+	border-radius: 10px;
+	/* box-shadow: 0px 6px 15px #fafafa61; */
+	padding: 1.5rem 3.5rem 1.5rem;
+}
+#submit::after {
+	opacity: 1;
+	transition: all 0.5s;
+}
+
+.submit-button-container {
+	margin-top: 10px;
+}
+#signup-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.sign-up-text {
+	margin: 1rem;
+}
