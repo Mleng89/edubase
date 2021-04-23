@@ -1,20 +1,22 @@
 {
   "files": {
-    "main.css": "/edubase/static/css/main.a83573c0.chunk.css",
-    "main.js": "/edubase/static/js/main.9b33f82d.chunk.js",
-    "main.js.map": "/edubase/static/js/main.9b33f82d.chunk.js.map",
+    "main.css": "/edubase/static/css/main.bdcbeb65.chunk.css",
+    "main.js": "/edubase/static/js/main.86242be6.chunk.js",
+    "main.js.map": "/edubase/static/js/main.86242be6.chunk.js.map",
     "runtime-main.js": "/edubase/static/js/runtime-main.bd3d81ae.js",
     "runtime-main.js.map": "/edubase/static/js/runtime-main.bd3d81ae.js.map",
-    "static/js/2.009a8e84.chunk.js": "/edubase/static/js/2.009a8e84.chunk.js",
-    "static/js/2.009a8e84.chunk.js.map": "/edubase/static/js/2.009a8e84.chunk.js.map",
+    "static/js/2.1bfbc44d.chunk.js": "/edubase/static/js/2.1bfbc44d.chunk.js",
+    "static/js/2.1bfbc44d.chunk.js.map": "/edubase/static/js/2.1bfbc44d.chunk.js.map",
     "index.html": "/edubase/index.html",
-    "static/css/main.a83573c0.chunk.css.map": "/edubase/static/css/main.a83573c0.chunk.css.map",
-    "static/js/2.009a8e84.chunk.js.LICENSE.txt": "/edubase/static/js/2.009a8e84.chunk.js.LICENSE.txt"
+    "static/css/main.bdcbeb65.chunk.css.map": "/edubase/static/css/main.bdcbeb65.chunk.css.map",
+    "static/js/2.1bfbc44d.chunk.js.LICENSE.txt": "/edubase/static/js/2.1bfbc44d.chunk.js.LICENSE.txt",
+    "static/media/firebase.e6583a29.svg": "/edubase/static/media/firebase.e6583a29.svg",
+    "static/media/react.add74742.svg": "/edubase/static/media/react.add74742.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.bd3d81ae.js",
-    "static/js/2.009a8e84.chunk.js",
-    "static/css/main.a83573c0.chunk.css",
-    "static/js/main.9b33f82d.chunk.js"
+    "static/js/2.1bfbc44d.chunk.js",
+    "static/css/main.bdcbeb65.chunk.css",
+    "static/js/main.86242be6.chunk.js"
   ]
 }
