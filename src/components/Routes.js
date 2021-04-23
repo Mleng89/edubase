@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Switch, useLocation, Route } from 'react-router-dom';
 import About from './About';
 import Contact from './Contact';
+import Account from './Account';
 
 function AllRoutes({ hideMenu }) {
 	let location = useLocation();
@@ -14,6 +15,7 @@ function AllRoutes({ hideMenu }) {
 		<Switch>
 			<Route path='/about' component={About}></Route>
 			<Route path='/contact' component={Contact}></Route>
+			<Route path='/account' component={Account}></Route>
 		</Switch>
 	);
 }
