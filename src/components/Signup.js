@@ -6,6 +6,7 @@ export default function Account() {
 	const [state, setState] = useState({
 		username: '',
 		password: '',
+		confirmpassword: '',
 		//ERROR HANDLING
 		// errorName: false,
 		// errorPassword: false,
@@ -22,7 +23,7 @@ export default function Account() {
 	return (
 		<div className='account-container'>
 			<div className='account-signin'>
-				<h2>Account Login</h2>
+				<h2>Sign up</h2>
 				<form className='sign-in' onSubmit={handleSubmit}>
 					<label>
 						<input
@@ -42,19 +43,28 @@ export default function Account() {
 							onChange={handleChange}
 						/>
 					</label>
+					<label>
+						<input
+							type='password'
+							id='confirmpassword'
+							value={state.confirmpassword}
+							placeholder='Confirm password'
+							onChange={handleChange}
+						/>
+					</label>
 
 					<div className='submit-button-container'>
 						<input id='submit' type='submit' value='Submit' />
 					</div>
 					<div id='signup-container'>
-						<p className='sign-up-text'>Don't have an account?</p>
+						<p className='sign-up-text'>Have an account?</p>
 						<NavLink
 							className='nav-link'
 							activeClassName='is-active'
 							exact={true}
-							to='/signup'
+							to='/account'
 						>
-							Sign up
+							Log in
 						</NavLink>
 					</div>
 				</form>
