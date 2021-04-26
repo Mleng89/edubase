@@ -21,6 +21,11 @@
 	font-size: large;
 	margin: 0.5rem;
 }
+#confirmpassword {
+	height: 3rem;
+	font-size: large;
+	margin: 0.5rem;
+}
 .sign-in {
 	display: flex;
 	flex-direction: column;
