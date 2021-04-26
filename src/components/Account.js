@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Account.css';
+import { firebaseConfig } from '../firebase';
+import { BrowserRouter, NavLink } from 'react-router-dom';
 export default function Account() {
 	const [state, setState] = useState({
 		username: '',
@@ -33,7 +35,7 @@ export default function Account() {
 					</label>
 					<label>
 						<input
-							type='text'
+							type='password'
 							id='password'
 							value={state.password}
 							placeholder='Password'
@@ -46,7 +48,14 @@ export default function Account() {
 					</div>
 					<div id='signup-container'>
 						<p className='sign-up-text'>Don't have an account?</p>
-						<a href='#/'>Sign up</a>
+						<NavLink
+							className='nav-link'
+							activeClassName='is-active'
+							exact={true}
+							to='/signup'
+						>
+							Sign up
+						</NavLink>
 					</div>
 				</form>
 			</div>
