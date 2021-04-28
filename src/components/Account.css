@@ -26,6 +26,11 @@
 	font-size: large;
 	margin: 0.5rem;
 }
+#email {
+	height: 3rem;
+	font-size: large;
+	margin: 0.5rem;
+}
 .sign-in {
 	display: flex;
 	flex-direction: column;
