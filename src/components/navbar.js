@@ -2,6 +2,7 @@ import { useRef } from 'react';
 import { BrowserRouter, NavLink } from 'react-router-dom';
 import AllRoutes from './Routes';
 import './navbar.css';
+
 export default function Navbar() {
 	const navbarLinks = useRef(null);
 	const handleNavBar = (e) => {
@@ -64,7 +65,7 @@ export default function Navbar() {
 									exact={true}
 									to='/account'
 								>
-									Log in/ Sign up
+									Log in / Sign up
 								</NavLink>
 							</li>
 						</ul>

@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import { Switch, useLocation, Route } from 'react-router-dom';
 import About from './About';
 import Contact from './Contact';
-import Account from './Account';
-import Signup from './Signup';
+import Account from './auth/Account';
+import Signup from './auth/Signup';
 
 function AllRoutes({ hideMenu }) {
 	let location = useLocation();
