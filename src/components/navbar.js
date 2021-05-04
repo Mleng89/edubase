@@ -63,7 +63,7 @@ export default function Navbar() {
 									className='nav-link'
 									activeClassName='is-active'
 									exact={true}
-									to='/account'
+									to='/login'
 								>
 									Log in / Sign up
 								</NavLink>

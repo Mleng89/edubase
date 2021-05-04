@@ -1,9 +1,17 @@
 import React, { useEffect } from 'react';
-import { Switch, useLocation, Route } from 'react-router-dom';
+import {
+	BrowserRouter as Router,
+	Switch,
+	useLocation,
+	Route,
+} from 'react-router-dom';
+import { AuthProvider } from '../Db/AuthContext';
 import About from './About';
 import Contact from './Contact';
 import Account from './auth/Account';
 import Signup from './auth/Signup';
+import PrivateRoute from '../components/auth/PrivateRoute';
+import Dashboard from '../components/Dashboard';
 
 function AllRoutes({ hideMenu }) {
 	let location = useLocation();
@@ -13,12 +21,17 @@ function AllRoutes({ hideMenu }) {
 	}, [location]);
 
 	return (
-		<Switch>
-			<Route path='/about' component={About}></Route>
-			<Route path='/contact' component={Contact}></Route>
-			<Route path='/account' component={Account}></Route>
-			<Route path='/signup' component={Signup}></Route>
-		</Switch>
+		<AuthProvider>
+			<Switch>
+				<PrivateRoute exact path='/dashboard' component={Dashboard} />
+				{/* Guest and all routes */}
+				<Route path='/about' component={About}></Route>
+				<Route path='/contact' component={Contact}></Route>
+				{/* AUTH Routes */}
+				<Route path='/login' component={Account}></Route>
+				<Route path='/signup' component={Signup}></Route>
+			</Switch>
+		</AuthProvider>
 	);
 }
 
