@@ -12,6 +12,7 @@ import Account from './auth/Account';
 import Signup from './auth/Signup';
 import PrivateRoute from '../components/auth/PrivateRoute';
 import Dashboard from '../components/Dashboard';
+import Homepage from './Homepage';
 
 function AllRoutes({ hideMenu }) {
 	let location = useLocation();
@@ -25,6 +26,7 @@ function AllRoutes({ hideMenu }) {
 			<Switch>
 				<PrivateRoute exact path='/dashboard' component={Dashboard} />
 				{/* Guest and all routes */}
+				<Route exact path='/' component={Homepage}></Route>
 				<Route path='/about' component={About}></Route>
 				<Route path='/contact' component={Contact}></Route>
 				{/* AUTH Routes */}

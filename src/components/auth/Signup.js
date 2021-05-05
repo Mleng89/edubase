@@ -78,7 +78,7 @@ export default function Account() {
 							className='nav-link'
 							activeClassName='is-active'
 							exact={true}
-							to='/account'
+							to='/login'
 						>
 							Log in
 						</NavLink>
