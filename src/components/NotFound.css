@@ -10,6 +10,7 @@
 }
 
 .notfound-container img {
+	margin: 2rem;
 	width: 50%;
 	height: 50%;
 }
