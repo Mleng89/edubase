@@ -13,6 +13,7 @@ import Signup from './auth/Signup';
 import PrivateRoute from '../components/auth/PrivateRoute';
 import Dashboard from '../components/Dashboard';
 import Homepage from './Homepage';
+import NotFound from './NotFound';
 
 function AllRoutes({ hideMenu }) {
 	let location = useLocation();
@@ -32,6 +33,7 @@ function AllRoutes({ hideMenu }) {
 				{/* AUTH Routes */}
 				<Route path='/login' component={Login}></Route>
 				<Route path='/signup' component={Signup}></Route>
+				<Route component={NotFound}></Route>
 			</Switch>
 		</AuthProvider>
 	);
