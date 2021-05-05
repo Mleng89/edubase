@@ -8,7 +8,7 @@ import {
 import { AuthProvider } from '../Db/AuthContext';
 import About from './About';
 import Contact from './Contact';
-import Account from './auth/Account';
+import Login from './auth/Login';
 import Signup from './auth/Signup';
 import PrivateRoute from '../components/auth/PrivateRoute';
 import Dashboard from '../components/Dashboard';
@@ -30,7 +30,7 @@ function AllRoutes({ hideMenu }) {
 				<Route path='/about' component={About}></Route>
 				<Route path='/contact' component={Contact}></Route>
 				{/* AUTH Routes */}
-				<Route path='/login' component={Account}></Route>
+				<Route path='/login' component={Login}></Route>
 				<Route path='/signup' component={Signup}></Route>
 			</Switch>
 		</AuthProvider>

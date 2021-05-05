@@ -1,10 +1,10 @@
 import React, { useRef, useState } from 'react';
-import './Account.css';
+import './Login.css';
 import { NavLink, useHistory } from 'react-router-dom';
 import app from '../../Db/firebase';
 import { useAuth } from '../../Db/AuthContext';
 
-export default function Account() {
+export default function Login() {
 	const [state, setState] = useState({
 		email: '',
 		password: '',
@@ -33,8 +33,8 @@ export default function Account() {
 	};
 
 	return (
-		<div className='account-container'>
-			<div className='account-signin'>
+		<div className='Login-container'>
+			<div className='Login-signin'>
 				<h2>Sign up</h2>
 
 				<form className='sign-in' onSubmit={handleSubmit}>
