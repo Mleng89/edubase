@@ -8,3 +8,9 @@
 .notfound-container h2 {
 	color: red;
 }
+
+.notfound-container img {
+	margin: 2rem;
+	width: 50%;
+	height: 50%;
+}
