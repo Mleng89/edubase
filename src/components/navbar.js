@@ -2,6 +2,9 @@ import { useRef } from 'react';
 import { BrowserRouter, NavLink } from 'react-router-dom';
 import AllRoutes from './Routes';
 import './navbar.css';
+import firebaselogo from '../Images/firebase.svg';
+import reactlogo from '../Images/react.svg';
+
 export default function Navbar() {
 	const navbarLinks = useRef(null);
 	const handleNavBar = (e) => {
@@ -62,9 +65,9 @@ export default function Navbar() {
 									className='nav-link'
 									activeClassName='is-active'
 									exact={true}
-									to='/account'
+									to='/login'
 								>
-									Log in/ Sign up
+									Log in / Sign up
 								</NavLink>
 							</li>
 						</ul>
@@ -78,6 +81,11 @@ export default function Navbar() {
 					></AllRoutes>
 				</div>
 			</BrowserRouter>
+			<footer>
+				<p>This project is built on:</p>
+				<img src={firebaselogo} alt='Firebase' />
+				<img src={reactlogo} alt='React' />
+			</footer>
 		</>
 	);
 }

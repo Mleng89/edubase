@@ -50,7 +50,22 @@ button {
 .navbar-links li:hover {
 	background-color: #555;
 }
-
+footer {
+	width: 100%;
+	background-color: #1f2228;
+	padding: 0.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+}
+img {
+	width: 5rem;
+	height: 5rem;
+}
+img:hover {
+	transform: scale(1.2);
+}
 @media (max-width: 750px) {
 	.toggle-button .bar {
 		height: 3px;
