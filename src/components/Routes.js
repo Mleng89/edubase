@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import {
-	HashRouter as Router,
+	BrowserRouter as Router,
 	Switch,
 	useLocation,
 	Route,
@@ -24,7 +24,7 @@ function AllRoutes({ hideMenu }) {
 
 	return (
 		<AuthProvider>
-			<Router>
+			<Switch>
 				<PrivateRoute exact path='/dashboard' component={Dashboard} />
 				{/* Guest and all routes */}
 				<Route exact path='/' component={Homepage}></Route>
@@ -34,7 +34,7 @@ function AllRoutes({ hideMenu }) {
 				<Route path='/login' component={Login}></Route>
 				<Route path='/signup' component={Signup}></Route>
 				<Route component={NotFound}></Route>
-			</Router>
+			</Switch>
 		</AuthProvider>
 	);
 }
