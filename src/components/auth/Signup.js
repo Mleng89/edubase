@@ -1,8 +1,8 @@
 import React, { useRef, useState } from 'react';
 import './Login.css';
 import { NavLink, useHistory } from 'react-router-dom';
-import app from '../../Db/firebase';
 import { useAuth } from '../../Db/AuthContext';
+import signupimg from '../../Images/signupimg.svg';
 
 export default function Login() {
 	// const [state, setState] = useState({
@@ -53,11 +53,15 @@ export default function Login() {
 	// 	setState({ ...state, [e.target.id]: e.target.value });
 	// };
 	return (
-		<div className='Login-container'>
-			<div className='Login-signin'>
+		<div className='login-container'>
+			<div className='login-signin'>
+				{/* <img src={firebaselogo} alt='Signup' /> */}
 				<h2>Sign up</h2>
-				{/* IF THERE IS AN ERROR, DISPLAY IT */}
-				{error && `${error}`}
+				<img src={signupimg} alt='signup' />
+				<div className='login-error'>
+					{/* IF THERE IS AN ERROR, DISPLAY IT */}
+					{error && <h3>{error}</h3>}
+				</div>
 				<form className='sign-in' onSubmit={handleSubmit}>
 					<label>
 						<input

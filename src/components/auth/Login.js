@@ -1,48 +1,49 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './Login.css';
-import { NavLink } from 'react-router-dom';
-import app from '../../Db/firebase';
+import { NavLink, useHistory } from 'react-router-dom';
+import { useAuth } from '../../Db/AuthContext';
+import loginimg from '../../Images/loginimg.svg';
 
 export default function Login() {
-	const [state, setState] = useState({
-		email: '',
-		password: '',
-		//ERROR HANDLING
-		// errorName: false,
-		// errorPassword: false,
-	});
+	const emailRef = useRef();
+	const passwordRef = useRef();
+	const { login } = useAuth();
+	const [error, setError] = useState('');
+	const [loading, setLoading] = useState(false);
+	const history = useHistory();
 
-	const handleSubmit = (e) => {
+	async function handleSubmit(e) {
 		e.preventDefault();
-	};
 
-	const handleChange = (e) => {
-		setState({ ...state, [e.target.id]: e.target.value });
-	};
+		try {
+			setError('');
+			setLoading(true);
+			await login(emailRef.current.value, passwordRef.current.value);
+			history.push('/dashboard');
+		} catch {
+			setError('Email and password does not match');
+		}
+	}
 
-	console.log('what is state?', state);
 	return (
-		<div className='Login-container'>
-			<div className='Login-signin'>
-				<h2>Login Login</h2>
-
+		<div className='login-container'>
+			<div className='login-signin'>
+				<h2>Login</h2>
+				<img src={loginimg} alt='login' />
+				<div className='login-error'>
+					{/* IF THERE IS AN ERROR, DISPLAY IT */}
+					{error && <h3>{error}</h3>}
+				</div>
 				<form className='sign-in' onSubmit={handleSubmit}>
 					<label>
-						<input
-							type='text'
-							id='email'
-							value={state.email}
-							placeholder='E-mail'
-							onChange={handleChange}
-						/>
+						<input type='text' id='email' ref={emailRef} placeholder='E-mail' />
 					</label>
 					<label>
 						<input
 							type='password'
 							id='password'
-							value={state.password}
+							ref={passwordRef}
 							placeholder='Password'
-							onChange={handleChange}
 						/>
 					</label>
 
