@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { BrowserRouter as Router, NavLink } from 'react-router-dom';
+import { HashRouter as Router, NavLink } from 'react-router-dom';
 import AllRoutes from './Routes';
 import './navbar.css';
 import firebaselogo from '../Images/firebase.svg';
