@@ -63,7 +63,7 @@ img {
 	width: 5rem;
 	height: 5rem;
 }
-img:hover {
+.footer-img:hover {
 	transform: scale(1.2);
 }
 @media (max-width: 750px) {

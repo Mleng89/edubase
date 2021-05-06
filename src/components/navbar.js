@@ -89,8 +89,8 @@ export default function Navbar() {
 			</AuthProvider>
 			<footer>
 				<p>This project is built on:</p>
-				<img src={firebaselogo} alt='Firebase' />
-				<img src={reactlogo} alt='React' />
+				<img className='footer-img' src={firebaselogo} alt='Firebase' />
+				<img className='footer-img' src={reactlogo} alt='React' />
 			</footer>
 		</>
 	);
