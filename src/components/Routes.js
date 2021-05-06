@@ -24,7 +24,7 @@ function AllRoutes({ hideMenu }) {
 
 	return (
 		<AuthProvider>
-			<Switch basename='/edubase'>
+			<Switch>
 				<PrivateRoute exact path='/dashboard' component={Dashboard} />
 				{/* Guest and all routes */}
 				<Route exact path='/' component={Homepage}></Route>
