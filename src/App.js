@@ -1,9 +1,12 @@
 import './App.css';
 import Navbar from './components/navbar';
+import { AuthProvider } from './Db/AuthContext';
 function App() {
 	return (
-		<div className=''>
-			<Navbar />
+		<div>
+			<AuthProvider>
+				<Navbar />
+			</AuthProvider>
 		</div>
 	);
 }

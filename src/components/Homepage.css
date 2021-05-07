@@ -1,7 +1,14 @@
 .homepage-container {
+	margin-top: 1rem;
 	text-align: center;
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
 	align-items: center;
+}
+
+@media (max-width: 625px) {
+	.homepage-container {
+		font-size: 10px;
+	}
 }

@@ -5,7 +5,7 @@ import {
 	useLocation,
 	Route,
 } from 'react-router-dom';
-import { AuthProvider } from '../Db/AuthContext';
+
 import About from './About';
 import Contact from './Contact';
 import Login from './auth/Login';
@@ -23,19 +23,17 @@ function AllRoutes({ hideMenu }) {
 	}, [location]);
 
 	return (
-		<AuthProvider>
-			<Switch>
-				<PrivateRoute exact path='/dashboard' component={Dashboard} />
-				{/* Guest and all routes */}
-				<Route exact path='/' component={Homepage}></Route>
-				<Route path='/about' component={About}></Route>
-				<Route path='/contact' component={Contact}></Route>
-				{/* AUTH Routes */}
-				<Route path='/login' component={Login}></Route>
-				<Route path='/signup' component={Signup}></Route>
-				<Route component={NotFound}></Route>
-			</Switch>
-		</AuthProvider>
+		<Switch>
+			<PrivateRoute exact path='/dashboard' component={Dashboard} />
+			{/* Guest and all routes */}
+			<Route exact path='/' component={Homepage}></Route>
+			<Route path='/about' component={About}></Route>
+			<Route path='/contact' component={Contact}></Route>
+			{/* AUTH Routes */}
+			<Route path='/login' component={Login}></Route>
+			<Route path='/signup' component={Signup}></Route>
+			<Route component={NotFound}></Route>
+		</Switch>
 	);
 }
 
