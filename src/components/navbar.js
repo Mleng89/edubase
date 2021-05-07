@@ -1,5 +1,5 @@
-import { useRef } from 'react';
-import { HashRouter as Router, NavLink } from 'react-router-dom';
+import { useRef, useState } from 'react';
+import { HashRouter as Router, NavLink, useHistory } from 'react-router-dom';
 import AllRoutes from './Routes';
 import './navbar.css';
 import firebaselogo from '../Images/firebase.svg';
@@ -7,7 +7,10 @@ import reactlogo from '../Images/react.svg';
 import { AuthProvider, useAuth } from '../Db/AuthContext';
 
 export default function Navbar() {
-	console.log('navbar: do i have a user?', useAuth());
+	const history = useHistory();
+	const [error, setError] = useState('');
+	const { currentUser, logout } = useAuth();
+	console.log('navbar: do i have a user?', currentUser);
 
 	const navbarLinks = useRef(null);
 
@@ -18,6 +21,17 @@ export default function Navbar() {
 		if (!navbarLinks.current.classList.contains('menu-collapse'))
 			navbarLinks.current.classList.add('menu-collapse');
 	};
+
+	async function handleLogout() {
+		setError('');
+
+		try {
+			await logout();
+			history.push('/');
+		} catch {
+			setError('Failed to log out');
+		}
+	}
 	return (
 		<>
 			<AuthProvider>
@@ -44,38 +58,80 @@ export default function Navbar() {
 							<span className='bar'></span>
 						</button>
 						<div ref={navbarLinks} className='navbar-links menu-collapse'>
-							<ul className='links-list'>
-								<li className='nav-item'>
-									<NavLink
-										className='nav-link'
-										activeClassName='is-active'
-										exact={true}
-										to='/about'
-									>
-										About us
-									</NavLink>
-								</li>
-								<li className='nav-item'>
-									<NavLink
-										className='nav-link'
-										activeClassName='is-active'
-										exact={true}
-										to='/contact'
-									>
-										Contact
-									</NavLink>
-								</li>
-								<li className='nav-item'>
-									<NavLink
-										className='nav-link'
-										activeClassName='is-active'
-										exact={true}
-										to='/login'
-									>
-										Log in / Sign up
-									</NavLink>
-								</li>
-							</ul>
+							{currentUser ? (
+								<ul className='links-list'>
+									<li className='nav-item'>
+										<NavLink
+											className='nav-link'
+											activeClassName='is-active'
+											exact={true}
+											to='/about'
+										>
+											About us
+										</NavLink>
+									</li>
+									<li className='nav-item'>
+										<NavLink
+											className='nav-link'
+											activeClassName='is-active'
+											exact={true}
+											to='/contact'
+										>
+											Contact
+										</NavLink>
+									</li>
+
+									<li className='nav-item'>
+										<NavLink
+											className='nav-link'
+											activeClassName='is-active'
+											exact={true}
+											to='/dashboard'
+										>
+											Account
+										</NavLink>
+									</li>
+									<li className='nav-item'>
+										<a href='/' onClick={() => handleLogout()}>
+											Log out
+										</a>
+									</li>
+								</ul>
+							) : (
+								<ul className='links-list'>
+									<li className='nav-item'>
+										<NavLink
+											className='nav-link'
+											activeClassName='is-active'
+											exact={true}
+											to='/about'
+										>
+											About us
+										</NavLink>
+									</li>
+									<li className='nav-item'>
+										<NavLink
+											className='nav-link'
+											activeClassName='is-active'
+											exact={true}
+											to='/contact'
+										>
+											Contact
+										</NavLink>
+									</li>
+
+									<li className='nav-item'>
+										<NavLink
+											className='nav-link'
+											activeClassName='is-active'
+											exact={true}
+											to='/login'
+										>
+											Log in / Sign up
+										</NavLink>
+									</li>
+								</ul>
+							)}
 						</div>
 					</nav>
 					<div>

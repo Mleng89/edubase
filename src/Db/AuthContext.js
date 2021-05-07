@@ -9,7 +9,7 @@ export function useAuth() {
 // console.log('inside authcontext.js', AuthContext);
 
 export function AuthProvider({ children }) {
-	console.log('what is props?', children);
+	// console.log('what is props?', children);
 	const [currentUser, setCurrentUser] = useState();
 	const [loading, setLoading] = useState(true);
 
