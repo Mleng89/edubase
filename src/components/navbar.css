@@ -14,7 +14,7 @@ body {
 }
 
 .brand-title {
-	font-size: 1.5rem;
+	font-size: 3rem;
 	margin: 0.5rem;
 	color: white;
 }
@@ -27,6 +27,7 @@ body {
 	filter: invert(25%);
 }
 .navbar-links ul {
+	font-size: 1.7rem;
 	margin: 0;
 	padding: 0;
 	display: flex;
@@ -66,7 +67,7 @@ img {
 .footer-img:hover {
 	transform: scale(1.2);
 }
-@media (max-width: 750px) {
+@media (max-width: 950px) {
 	.toggle-button .bar {
 		height: 3px;
 		width: 100%;
@@ -80,8 +81,8 @@ img {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		width: 30px;
-		height: 21px;
+		width: 40px;
+		height: 30px;
 	}
 	div.navbar-links {
 		margin-right: 0;
@@ -89,7 +90,7 @@ img {
 		width: 100%;
 		background: #1f2228;
 		z-index: 99;
-		margin-top: 2.7rem;
+		margin-top: 4.5rem;
 		right: 0;
 		height: 100%;
 		transition: all ease-in-out 0.3s;
