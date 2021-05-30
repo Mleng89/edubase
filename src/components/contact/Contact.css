@@ -6,6 +6,23 @@
 	flex-direction: column;
 	align-items: center;
 }
+.contact-links {
+	margin: 1em;
+	display: flex;
+}
+#linkedin {
+	margin: 2em;
+}
+#twitter {
+	margin: 2em;
+}
+#github {
+	margin: 2em;
+}
 
-@media (max-width: 625px) {
+@media (max-width: 950px) {
+	.contact-links {
+		display: flex;
+		flex-direction: column;
+	}
 }
