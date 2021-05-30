@@ -1,6 +1,6 @@
 import React from 'react';
 import './NotFound.css';
-import notfoundimg from '../Images/notfoundimg.svg';
+import notfoundimg from '../../Images/notfoundimg.svg';
 
 export default function NotFound() {
 	return (
