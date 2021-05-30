@@ -6,14 +6,14 @@ import {
 	Route,
 } from 'react-router-dom';
 
-import About from './About';
-import Contact from './Contact';
+import About from '../components/about/About';
+import Contact from '../components/contact/Contact';
 import Login from './auth/Login';
 import Signup from './auth/Signup';
 import PrivateRoute from '../components/auth/PrivateRoute';
 import Dashboard from '../components/Dashboard';
 import Homepage from './Homepage';
-import NotFound from './NotFound';
+import NotFound from '../components/404/NotFound';
 
 function AllRoutes({ hideMenu }) {
 	let location = useLocation();

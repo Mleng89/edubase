@@ -1,6 +1,6 @@
 import React from 'react';
 import './About.css';
-import { useAuth } from '../Db/AuthContext';
+import { useAuth } from '../../Db/AuthContext';
 
 export default function About() {
 	console.log('in about do i have useAuth', useAuth());
