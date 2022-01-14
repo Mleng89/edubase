@@ -1,10 +1,10 @@
 import { useRef, useState } from 'react';
 import { HashRouter as Router, NavLink, useHistory } from 'react-router-dom';
-import AllRoutes from './Routes';
+import AllRoutes from '../Routes';
 import './navbar.css';
-import firebaselogo from '../Images/firebase.svg';
-import reactlogo from '../Images/react.svg';
-import { AuthProvider, useAuth } from '../Db/AuthContext';
+import firebaselogo from '../../Images/firebase.svg';
+import reactlogo from '../../Images/react.svg';
+import { AuthProvider, useAuth } from '../../Db/AuthContext';
 
 export default function Navbar() {
 	const history = useHistory();

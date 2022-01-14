@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Dashboard.css';
-import { useAuth } from '../Db/AuthContext';
+import { useAuth } from '../../Db/AuthContext';
 import { Link, useHistory } from 'react-router-dom';
 
 export default function Dashboard() {
