@@ -11,8 +11,8 @@ import Contact from '../components/contact/Contact';
 import Login from './auth/Login';
 import Signup from './auth/Signup';
 import PrivateRoute from '../components/auth/PrivateRoute';
-import Dashboard from '../components/Dashboard';
-import Homepage from './Homepage';
+import Dashboard from '../components/dashboard/Dashboard';
+import Homepage from './homepage/Homepage';
 import NotFound from '../components/404/NotFound';
 
 function AllRoutes({ hideMenu }) {

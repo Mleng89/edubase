@@ -1,5 +1,5 @@
 import './App.css';
-import Navbar from './components/navbar';
+import Navbar from './components/navbar/navbar';
 import { AuthProvider } from './Db/AuthContext';
 function App() {
 	return (
