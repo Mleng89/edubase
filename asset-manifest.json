@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/edubase/static/css/main.2898d896.chunk.css",
-    "main.js": "/edubase/static/js/main.6fa234e4.chunk.js",
-    "main.js.map": "/edubase/static/js/main.6fa234e4.chunk.js.map",
+    "main.js": "/edubase/static/js/main.61cefdd9.chunk.js",
+    "main.js.map": "/edubase/static/js/main.61cefdd9.chunk.js.map",
     "runtime-main.js": "/edubase/static/js/runtime-main.e660af1e.js",
     "runtime-main.js.map": "/edubase/static/js/runtime-main.e660af1e.js.map",
     "static/js/2.640578a0.chunk.js": "/edubase/static/js/2.640578a0.chunk.js",
@@ -23,6 +23,6 @@
     "static/js/runtime-main.e660af1e.js",
     "static/js/2.640578a0.chunk.js",
     "static/css/main.2898d896.chunk.css",
-    "static/js/main.6fa234e4.chunk.js"
+    "static/js/main.61cefdd9.chunk.js"
   ]
 }
