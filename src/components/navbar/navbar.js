@@ -27,7 +27,7 @@ export default function Navbar() {
 
 		try {
 			await logout();
-			history.push('/');
+			history.push('/edubase/#/');
 		} catch {
 			setError('Failed to log out');
 		}
