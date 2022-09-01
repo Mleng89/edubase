@@ -92,7 +92,7 @@ export default function Navbar() {
 										</NavLink>
 									</li>
 									<li className='nav-item'>
-										<a href='/' onClick={() => handleLogout()}>
+										<a href='/edubase/#/' onClick={() => handleLogout()}>
 											Log out
 										</a>
 									</li>
