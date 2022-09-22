@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import { NavLink, useHistory } from 'react-router-dom';
+import { Alert } from 'react-bootstrap';
 import { useAuth } from '../../Db/AuthContext';
 
 export default function ForgotPassword() {
@@ -17,9 +18,9 @@ export default function ForgotPassword() {
 			setError('');
 			setLoading(true);
 			await resetPassword(emailRef.current.value);
-			setMessage('Check your inbox for further instructions');
+			setMessage('Please check your inbox to reset your password.');
 		} catch {
-			setError('Failed to reset password');
+			setError('E-mail not found, please sign up using this e-mail.');
 		}
 
 		setLoading(false);
@@ -27,9 +28,12 @@ export default function ForgotPassword() {
 
 	return (
 		<div className='login-container'>
-			<h2>Feature still being developed.</h2>
 			<div className='login-signin'>
 				<h2>Password Reset</h2>
+				<div className='alert-container'>
+					{message && <div className='success-message'>{message}</div>}
+					{error && <div className='error-message'>{error}</div>}
+				</div>
 				<form className='sign-in' onSubmit={handleSubmit}>
 					<label>
 						<input
@@ -44,6 +48,14 @@ export default function ForgotPassword() {
 					<div className='submit-button-container'>
 						<input id='submit' type='submit' value='Submit' />
 					</div>
+					<NavLink
+						className='nav-link'
+						activeClassName='is-active'
+						exact={true}
+						to='/login'
+					>
+						Login
+					</NavLink>
 				</form>
 			</div>
 			<div id='signup-container'>
