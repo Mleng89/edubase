@@ -14,7 +14,7 @@ import PrivateRoute from '../components/auth/PrivateRoute';
 import Dashboard from '../components/dashboard/Dashboard';
 import Homepage from './homepage/Homepage';
 import NotFound from '../components/404/NotFound';
-
+import FileUpload from '../components/dashboard/fileupload/FileUpload';
 function AllRoutes({ hideMenu }) {
 	let location = useLocation();
 	// Rerenders once the location is changed ie: path: "/" --> "/contact"
@@ -25,6 +25,8 @@ function AllRoutes({ hideMenu }) {
 	return (
 		<Switch>
 			<PrivateRoute exact path='/dashboard' component={Dashboard} />
+			<PrivateRoute exact path='/files' component={FileUpload} />
+			{/* <PrivateRoute exact path='/fileupload' component={FileUpload} /> */}
 			{/* Guest and all routes */}
 			<Route exact path='/' component={Homepage}></Route>
 			<Route path='/about' component={About}></Route>
