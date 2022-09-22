@@ -1,5 +1,5 @@
 import { useReducer, useEffect } from 'react';
-import { database } from '../firebase';
+import { database } from '../Db/firebase';
 import { useAuth } from '../Db/AuthContext';
 
 //REDUX
